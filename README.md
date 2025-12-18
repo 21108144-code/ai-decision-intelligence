@@ -219,7 +219,7 @@ ai-decision-intelligence/
 
 ## 📚 Documentation
 
-- [📖 Project Documentation](docs/PROJECT_DOCUMENTATION.md) - Comprehensive technical guide with interview Q&A
+
 - [🏗️ Architecture Deep Dive](docs/ARCHITECTURE.md)
 - [🚀 Deployment Guide](docs/DEPLOYMENT.md)
 
