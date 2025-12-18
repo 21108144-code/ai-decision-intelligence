@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 bg-gray-50;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* React Flow MiniMap Styles */
+.react-flow__minimap {
+  background-color: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.react-flow__minimap-mask {
+  fill: rgba(99, 102, 241, 0.1) !important;
+}
+
+.react-flow__minimap-node {
+  fill-opacity: 1 !important;
+  stroke-width: 2 !important;
+}
+
+@layer components {
+
+  /* Glass Morphism Cards */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl transition-all duration-300;
+  }
+
+  .glass-card-light {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg transition-all duration-300;
+  }
+
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-xl border border-white/30 rounded-3xl shadow-2xl;
+  }
+
+  /* Vibrant Gradients */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-fuchsia-600 to-indigo-600 animate-gradient-x;
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(to right, #8b5cf6, #ec4899, #3b82f6) border-box;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply relative overflow-hidden px-6 py-3 rounded-xl font-bold text-white shadow-lg transition-all duration-300;
+    background: linear-gradient(45deg, #6366f1, #8b5cf6, #d946ef);
+    background-size: 200% 200%;
+    animation: gradient-xy 6s ease infinite;
+  }
+
+  .btn-primary:hover {
+    @apply shadow-indigo-500/50 scale-[1.02];
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-xl font-bold text-gray-700 bg-white/80 backdrop-blur-sm border border-gray-200 shadow-sm hover:bg-white transition-all duration-300 hover:shadow-md;
+  }
+
+  /* Inputs */
+  .modern-input {
+    @apply w-full px-5 py-4 rounded-xl bg-white/60 backdrop-blur-sm border-2 border-transparent focus:border-violet-500 focus:ring-0 transition-all duration-300 shadow-inner resize-none outline-none;
+  }
+}
+
+@layer utilities {
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 6s ease infinite;
+  }
+
+  .animate-gradient-xy {
+    background-size: 200% 200%;
+    animation: gradient-xy 6s ease infinite;
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes gradient-x {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes gradient-xy {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 1;
+      filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));
+    }
+
+    50% {
+      opacity: 0.7;
+      filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.8));
+    }
+  }
+}
