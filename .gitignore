@@ -44,6 +44,8 @@ data/vector_db/*
 !data/vector_db/.gitkeep
 data/*.db
 data/*.db-journal
+backend/data/*.db
+backend/data/*.db-journal
 
 # Logs
 *.log
